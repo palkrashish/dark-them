@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Toggle from './component/Toggle/Toggle'
 import useLocalStorage from "use-local-storage";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
   return (
     <div className="App" data-theme={isDark ? "dark" : "light"}>
       <h1>Example of Dark theme</h1>
+      <Toggle isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
       <div className="box">
         <h2>This is box</h2>
       </div>
